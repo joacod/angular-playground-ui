@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-playground-ui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-playground-ui');
+    expect(app.title).toEqual('Angular Playground');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-playground-ui!!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Angular Playground!!');
   });
 });
