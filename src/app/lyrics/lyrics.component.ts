@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LyricsService} from '../services/lyrics.service'
+import { ISongLyrics } from './songLyrics';
 
 @Component({
   selector: 'app-lyrics',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LyricsComponent implements OnInit {
 
-  constructor() { }
+  lyrics: ISongLyrics;
+  errorMessage = '';
+
+  constructor(private lyricsService: LyricsService) {
+  }
 
   ngOnInit(): void {
+    this.lyricsService.getLyrics().subscribe({
+      next: response => {
+        this.lyrics = response;
+      },
+      error: err => this.errorMessage = err
+    });
   }
 
 }
