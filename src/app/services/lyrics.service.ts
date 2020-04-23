@@ -17,7 +17,7 @@ export class LyricsService {
   // Go Web API
   //private lyricsUrl = 'http://localhost:8080/api/v1/lyrics/';
 
-  getLyrics(): Observable<ISongLyrics> {
-    return this.http.get<ISongLyrics>(this.lyricsUrl + 'beatles' + '/' + 'come%20together');
+  getLyrics(artist: string, song: string): Observable<ISongLyrics> {
+    return this.http.get<ISongLyrics>(this.lyricsUrl + artist + '/' + song);
   }
 }

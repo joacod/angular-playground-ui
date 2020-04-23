@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LyricsComponent } from './lyrics.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -9,7 +8,7 @@ import { LyricsComponent } from './lyrics.component';
     LyricsComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ],
   exports: [
     LyricsComponent

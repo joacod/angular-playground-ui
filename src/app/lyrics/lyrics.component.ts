@@ -16,7 +16,7 @@ export class LyricsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.lyricsService.getLyrics().subscribe({
+    this.lyricsService.getLyrics('beatles', 'come%20together').subscribe({
       next: response => {
         this.lyrics = response;
       },
