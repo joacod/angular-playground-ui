@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { MatProgressButtonsModule } from 'mat-progress-buttons';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressButtonsModule
   ],
   exports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressButtonsModule
   ]
 })
 export class SharedModule { }
