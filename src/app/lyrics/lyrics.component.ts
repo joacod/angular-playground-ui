@@ -10,13 +10,23 @@ import { ISongLyrics } from './songLyrics';
 export class LyricsComponent implements OnInit {
 
   lyrics: ISongLyrics;
+  artist: string = 'beatles';
+  song: string = 'come together';
   errorMessage = '';
 
   constructor(private lyricsService: LyricsService) {
+    this.lyrics = {
+      Artist: '',
+      SongTitle: '',
+      Lyrics: ''
+    }
   }
 
   ngOnInit(): void {
-    this.lyricsService.getLyrics('beatles', 'come%20together').subscribe({
+  }
+
+  onsearchLyrics(): void {
+    this.lyricsService.getLyrics(this.artist, this.song).subscribe({
       next: response => {
         this.lyrics = response;
       },

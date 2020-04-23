@@ -1,5 +1,5 @@
 export interface ISongLyrics {
-  Artist: number;
+  Artist: string;
   SongTitle: string;
   Lyrics: string;
 }

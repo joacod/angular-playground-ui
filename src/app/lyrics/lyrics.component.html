@@ -1,31 +1,31 @@
 <mat-card>
-  <mat-card-title>Search</mat-card-title>
+  <mat-card-title>Find Lyrics</mat-card-title>
   <mat-card-content>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance='fill'>
       <mat-label>Artist</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]='artist'>
     </mat-form-field>
     <br>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance='fill'>
       <mat-label>Song</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]='song'>
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Search</button>
+    <button mat-button (click)='onsearchLyrics()'>Search</button>
   </mat-card-actions>
 </mat-card>
 
 <mat-card>
   <mat-card-title>Lyrics</mat-card-title>
   <mat-card-content>
-    <mat-label>{{lyrics?.Artist}}</mat-label>
+    <mat-label >{{lyrics.Artist}}</mat-label>
     <br>
-    <mat-label>{{lyrics?.SongTitle}}</mat-label>
+    <mat-label>{{lyrics.SongTitle}}</mat-label>
     <br>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance='fill'>
       <mat-label>Lyrics</mat-label>
-      <textarea cdkTextareaAutosize matInput>{{lyrics?.Lyrics}}</textarea>
+      <textarea cdkTextareaAutosize matInput>{{lyrics.Lyrics}}</textarea>
     </mat-form-field>
   </mat-card-content>
 
