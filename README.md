@@ -13,8 +13,11 @@ The idea of this project is to provide a UI that consume the apis exposed in the
 - [NetCore.Playground.Api](https://github.com/joacod/NetCore.Playground.Api)
 - [go-playground-api](https://github.com/joacod/go-playground-api)
 
+*Both API projects implements the exact same endpoints.*
+
 What we get from this:
-- We practice different approaches in Angular
+- We have API implementations to download and to hook up with our UI project.
+- We can practice different approaches in Angular
 
 ## Prerequisites
 - [Install Angular](https://angular.io/)
