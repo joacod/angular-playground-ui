@@ -24,3 +24,6 @@ What we get from this:
 1. From the terminal: `ng serve`
 2. Once it's running, go to a browser
 3. Hit the following url http://localhost:4200/
+4. For the pages to work properly you will need a backend Web API up and running too, you can choose either of this:
+    - [NetCore.Playground.Api](https://github.com/joacod/NetCore.Playground.Api)
+    - [go-playground-api](https://github.com/joacod/go-playground-api)
