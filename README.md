@@ -1,7 +1,7 @@
 # Angular Playground
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
-We use [Angular Material](https://material.angular.io/)
+We use [Angular Material](https://material.angular.io/) and [Flex-Layout](https://github.com/angular/flex-layout)
 
 <p align="center">
   <img height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png">

@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatProgressButtonsModule } from 'mat-progress-buttons';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatProgressButtonsModule } from 'mat-progress-buttons';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatProgressButtonsModule
+    MatProgressButtonsModule,
+    FlexLayoutModule
   ],
   exports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { MatProgressButtonsModule } from 'mat-progress-buttons';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatProgressButtonsModule
+    MatProgressButtonsModule,
+    FlexLayoutModule
   ]
 })
 export class SharedModule { }
