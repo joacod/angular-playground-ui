@@ -14,7 +14,7 @@ export class LyricsComponent implements OnInit {
   lyrics: ISongLyrics;
   artist: string = 'beatles';
   song: string = 'come together';
-  errorMessage: HttpErrorResponse;
+  errorMessage: string;
   showLyrics: boolean = false;
   spinnerButtonOptions: MatProgressButtonOptions = {
     active: false,
@@ -53,8 +53,13 @@ export class LyricsComponent implements OnInit {
         this.spinnerButtonOptions.active = false;
       },
       error: err => {
-        this.errorMessage = err;
         this.showLyrics = false;
+        if (err.status == 404) {
+          this.errorMessage = err.error;
+        } else {
+          this.errorMessage = err.statusText;
+        }
+
         this.spinnerButtonOptions.active = false;
       }
     });

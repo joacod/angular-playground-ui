@@ -4,7 +4,33 @@
   flex-wrap: wrap;
 }
 
-.flex-item {
-  width: 500px;
-  margin: 20px 10px 20px 10px;
+@media all and (max-width: 800px) {
+  .flex-container {
+      justify-content: flex-start;
+  }
+}
+
+.item {
+  margin: 10px;
+}
+
+.search {
+  width: 300px;
+}
+
+.flex-lyrics {
+  flex: 1 1 auto;
+  min-width: 300px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.align-right {
+  float: right;
+}
+
+.lyrics-wrapper {
+  margin-left: 15px;
 }

@@ -1,45 +1,40 @@
 <div class="flex-container" fxLayout.xs="column" fxLayoutAlign="space-around start" >
 
-  <mat-card class="flex-item">
-    <mat-card-title>Find Lyrics</mat-card-title>
+  <mat-card class="item search">
+    <mat-card-header>
+      <mat-card-title>Find Lyrics</mat-card-title>
+    </mat-card-header>
     <mat-card-content>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" class="full-width">
         <mat-label>Artist Name</mat-label>
         <input matInput [(ngModel)]="artist">
         <mat-icon matSuffix>face</mat-icon>
       </mat-form-field>
       <br>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" class="full-width">
         <mat-label>Song Name</mat-label>
         <input matInput [(ngModel)]="song">
         <mat-icon matSuffix>audiotrack</mat-icon>
       </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions>
-      <mat-spinner-button
+      <mat-spinner-button class="align-right"
         [options]="spinnerButtonOptions"
         (btnClick)="onsearchLyrics()">
       </mat-spinner-button>
-    </mat-card-actions>
+    </mat-card-content>
   </mat-card>
 
-  <mat-card class="flex-item">
-    <mat-card-title>Lyrics</mat-card-title>
-    <mat-card-content *ngIf="showLyrics">
-      <mat-label>{{lyrics.Artist}}</mat-label>
-      <br>
-      <mat-label>{{lyrics.SongTitle}}</mat-label>
-      <br>
-      <mat-form-field appearance="fill">
-        <mat-label>Lyrics</mat-label>
-        <textarea cdkTextareaAutosize matInput>{{lyrics.Lyrics}}</textarea>
-      </mat-form-field>
+  <mat-card class="item flex-lyrics">
+    <mat-card-header>
+      <mat-card-title>Lyrics</mat-card-title>
+    </mat-card-header>
+    <mat-card-content *ngIf="showLyrics" class="lyrics-wrapper">
+      <h2 class="full-width">{{lyrics.Artist}} - {{lyrics.SongTitle}}</h2>
+      <textarea cdkTextareaAutosize matInput>{{lyrics.Lyrics}}</textarea>
     </mat-card-content>
 
-    <mat-card-content *ngIf="!showLyrics">
-      <mat-label>{{errorMessage?.message}}</mat-label>
+    <mat-card-content *ngIf="!showLyrics" class="lyrics-wrapper">
+      <mat-label>{{errorMessage}}</mat-label>
     </mat-card-content>
-
   </mat-card>
 
 </div>
