@@ -16,7 +16,7 @@ The idea of this project is to provide a UI that consume the apis exposed in the
 *Both API projects implements the exact same endpoints.*
 
 What we get from this:
-- We have API implementations to download and to hook up with our UI project.
+- We have API implementations to download and hook up with our UI project.
 - We can practice different approaches in Angular
 
 ## Prerequisites
