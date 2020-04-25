@@ -7,16 +7,17 @@
     <mat-card-content>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Artist Name</mat-label>
-        <input matInput [(ngModel)]="artist">
+        <input required matInput [(ngModel)]="artist">
         <mat-icon matSuffix>face</mat-icon>
       </mat-form-field>
       <br>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Song Name</mat-label>
-        <input matInput [(ngModel)]="song">
+        <input required matInput [(ngModel)]="song" (keyup.enter)="onsearchLyrics()">
         <mat-icon matSuffix>audiotrack</mat-icon>
       </mat-form-field>
       <mat-spinner-button class="align-right"
+        [disabled]="!artist || !song"
         [options]="spinnerButtonOptions"
         (btnClick)="onsearchLyrics()">
       </mat-spinner-button>
@@ -27,9 +28,9 @@
     <mat-card-header>
       <mat-card-title>Lyrics</mat-card-title>
     </mat-card-header>
-    <mat-card-content *ngIf="showLyrics" class="lyrics-wrapper">
-      <h2 class="full-width">{{lyrics.Artist}} - {{lyrics.SongTitle}}</h2>
-      <textarea cdkTextareaAutosize matInput>{{lyrics.Lyrics}}</textarea>
+    <mat-card-content *ngIf="showLyrics" class="lyrics-wrapper flex-column">
+      <h2>{{lyrics.Artist}} - {{lyrics.SongTitle}}</h2>
+      <textarea readonly matTextareaAutosize matInput>{{lyrics.Lyrics}}</textarea>
     </mat-card-content>
 
     <mat-card-content *ngIf="!showLyrics" class="lyrics-wrapper">
