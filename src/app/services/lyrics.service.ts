@@ -12,10 +12,10 @@ export class LyricsService {
   }
 
   // .Net Core Web API
-  private lyricsUrl = 'https://localhost:44309/api/v1/lyrics/';
+  //private lyricsUrl = 'https://localhost:44309/api/v1/lyrics/';
 
   // Go Web API
-  //private lyricsUrl = 'http://localhost:8080/api/v1/lyrics/';
+  private lyricsUrl = 'http://localhost:8080/api/v1/lyrics/';
 
   getLyrics(artist: string, song: string): Observable<ISongLyrics> {
     return this.http.get<ISongLyrics>(this.lyricsUrl + artist + '/' + song);
