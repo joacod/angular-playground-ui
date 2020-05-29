@@ -31,3 +31,4 @@ What we get from this:
 4. For the pages to work properly you will need a backend Web API up and running too, you can choose either of this:
     - [NetCore.Playground.Api](https://github.com/joacod/NetCore.Playground.Api)
     - [go-playground-api](https://github.com/joacod/go-playground-api)
+    - [node-playground-api](https://github.com/joacod/node-playground-api)
